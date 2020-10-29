@@ -1,0 +1,63 @@
+% ----------------------------------------------------------
+% Fundamentação Teórica
+% ----------------------------------------------------------
+\chapter[Fundamentação Teórica]{Fundamentação Teórica}
+
+Neste capítulo é apresentado os conceitos básicos necessários para compreensão deste trabalho bem como os trabalhos relacionados.
+
+% --------------------------%
+% --- Conceitos Básicos --- %
+\section{Conceitos Básicos}
+
+Esta seção apresenta os conceitos teóricos relacionados ...
+
+\subsection{Exemplos}
+
+Exemplo de inserção de figura (Figura~\ref{fig:figura}).
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=10cm]{figuras/Heckert_GNU_white}
+    \caption{Exemplo de figura.}
+    \label{fig:figura}
+\end{figure}
+
+Exemplo tabela (Figura~\ref{tab:tabela}).
+\begin{table}[htb]
+    \centering
+    \caption{Exemplo de tabela.}
+    \begin{tabular}{c|cc}
+        \hline
+        Algoritmo & Resultado & Tempo\\
+        \hline
+        Alg 1 & $10,5$ & $0,2$\\
+        Alg 2 & ... & ...\\
+        ... & ... & ...\\
+        \hline
+    \end{tabular}
+    \label{tab:tabela}
+\end{table}
+
+Exemplo de equação (Equação~\eqref{eq:equacao}).
+\begin{equation}
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\label{eq:equacao}
+\end{equation}
+
+Além disso, quando formos escrever números ou símbolos matemáticos ao longo do texto, usamos a seguinte notação: $x=2$, $y^2=\log_2(x)$, etc.
+
+Exemplo de algoritmo, usando o pacote \texttt{algorithm2e} (Algoritmo~\ref{alg:algoritmo})
+\begin{algorithm}
+    \caption{Exemplo de algoritmo.}
+    \Entrada{$x$ e $y$ inteiros.}
+    \Saida{$z$ inteiro.}
+    \Se{$x>y$}{
+    	z = x - y\;
+    }
+    \label{alg:algoritmo}
+\end{algorithm}
+
+
+% -------------------------------%
+% --- Trabalhos Relacionados --- %
+\section{Trabalhos Relacionados}
+

@@ -1,0 +1,131 @@
+% ------------------------------------------------------------------------
+% PROPRIEDADES DO DOCUMENTO
+% ------------------------------------------------------------------------
+\documentclass[12pt,
+openright, 
+oneside, %
+%twoside, %TCC: Se seu texto tem mais de 100 páginas, descomente esta linha e comente a anterior
+a4paper,    %
+%english,   %
+brazil]{facom-ufu-abntex2}
+
+% ------------------------------------------------------------------------
+% PACOTES
+% ------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{icomma}
+\usepackage[portuguese,ruled]{algorithm2e}
+
+% ------------------------------------------------------------------------
+% INFO para CAPA e FOLHA DE ROSTO 
+% ------------------------------------------------------------------------
+\titulo{Título do Trabalho de Conclusão de Curso} %TCC
+
+\autor{Nome completo do autor} %TCC
+\data{Ano de defesa}
+
+\orientador{Nome completo do orientador} %TCC
+%\coorientador{Nome completo do orientador caso tenha} %TCC
+
+\begin{document}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+%\pretextual
+\imprimircapa
+\imprimirfolhaderosto
+
+
+% --- Inserir folha de aprovação --- %
+\input{preTextuais/folhaAprovacao}
+% \includepdf{folhadeaprovacao_final.pdf} % TCC: depois de aprovado o trabalho, descomente esta linha e comente a anterior para incluir o scan da folha de aprovação.
+
+%% OBS.: as seções dedicatória, agradecimento e epígrafe não são obrigatórias. Só as mantenha se achar pertinente.
+
+% --- Dedicatória --- %
+\imprimirdedicatoria{Insere o texto de dedicatória ... }
+
+% --- Agradecimentos --- %
+\imprimiragradecimentos{Insere o texto de agradecimentos ...}
+
+% --- Epígrafe --- %
+\imprimirepigrafe{Insere alguma citação que ache conveniente caso queira ...}
+	
+% --- Resumo em português --- %
+\begin{resumo} %TCC:
+Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão  destes itens dependem do tipo de resumo (informativo ou indicativo) e do tratamento que cada item recebe no documento original. O resumo deve ser precedido da referência do documento, com exceção do resumo inserido no  próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do resumo, antecedidas da expressão Palavras-chave:, separadas entre si por ponto e finalizadas também por ponto.
+ 
+ \vspace{\onelineskip}
+ \noindent
+ \textbf{Palavras-chave}: Até, cinco, palavras-chave, separadas, por, vírgulas. %TCC:
+\end{resumo}
+
+% --- lista de ilustrações --- %
+\listailustracoes
+
+% --- lista de tabelas --- %
+\listatabelas
+
+% --- lista de abreviaturas e siglas --- %
+\input{preTextuais/abreviaturas}
+
+% --- lista de símbolos --- %
+\input{preTextuais/simbolos} % caso não existe símbolos no trabalho, comente esta linha
+
+% --- sumario --- %
+\sumario
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% --- Introdução --- %
+\include{capitulos/introducao}
+
+% ---  Fundamentação teórica --- %
+\include{capitulos/fundamentacaoTeorica}
+
+% --- Desenvolvimento --- %
+\include{capitulos/desenvolvimento}
+
+% --- Conclusão --- %
+\include{capitulos/conclusao}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% --- Referências bibliográficas --- %
+\bibliography{blibiografia}
+
+% --- Apêndices --- %
+% só mantenha se for pertinente.
+\begin{apendicesenv}
+\partapendices % Imprime uma página indicando o início dos apêndices
+
+% --- Apendice 1--- %
+\include{apendices/apendice1}
+
+\end{apendicesenv}
+
+% --- Anexos --- %
+% so mantenha se pertinente.
+\begin{anexosenv}
+\partanexos % Imprime uma página indicando o início dos anexos
+
+% --- Anexo 1 --- %
+\include{anexos/anexo1}
+
+\end{anexosenv}
+
+
+% ------------------------------------------------------------------------
+% FIM DO DOCUMENTO
+% ------------------------------------------------------------------------
+\printindex
+\end{document}
